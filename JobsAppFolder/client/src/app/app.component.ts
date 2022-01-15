@@ -11,7 +11,11 @@ export class AppComponent implements OnInit {
   title = 'The Jobs App';
   users: any;
 
+<<<<<<< HEAD
   constructor(private http: HttpClient, private accountService: AccountService) {
+=======
+  constructor(private accountService: AccountService) {
+>>>>>>> Section-5--Client-login-and-register
 
   }
   ngOnInit(): void {

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Errors
 {
+    //ApiException: StatusCode,Message,Details
     public class ApiException
     {
 

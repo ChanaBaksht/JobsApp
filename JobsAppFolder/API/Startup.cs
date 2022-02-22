@@ -65,14 +65,14 @@ namespace API
 
             app.UseRouting();
 
-            //Where you arrived mi:
+            //Where you arrived me:
             app.UseCors(policy =>
             policy
             .AllowAnyHeader()
             .AllowAnyMethod()
             .WithOrigins("https://localhost:4200"));
 
-            //Hho are yoe:
+            //Hho are you:
             app.UseAuthentication();
 
             //What you can do:

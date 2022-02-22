@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
@@ -17,8 +16,8 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 
-//update commponents:
 @NgModule({
+  //Commponents:
   declarations: [
     AppComponent,
     NavComponent,
@@ -30,14 +29,16 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
     NotFoundComponent,
     ServerErrorComponent,
   ],
+  //Modules:
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule, 
-    CoreModule, RouterModule
+    CoreModule,
+    RouterModule,
   ],
+  //Services and Interceptors:
   providers: [
     {
       provide:HTTP_INTERCEPTORS,
@@ -45,7 +46,7 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
       multi:true
     }
   ],
-  //start with:
+  //Start with:
   bootstrap: [AppComponent]
 })
 export class AppModule { }
